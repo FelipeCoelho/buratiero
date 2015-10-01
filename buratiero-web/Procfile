@@ -1,0 +1,1 @@
+web: java -cp $ JAVA_OPTS alvo / classes: target / dependência / * InicioPage

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioProcesso" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="796a3f37-0cee-479e-8986-83de0b1631bf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="nuProcesso" class="java.lang.String"/>
+	<field name="cidade.nome" class="java.lang.String"/>
+	<field name="dsVara" class="java.lang.String"/>
+	<field name="dtpublicacao" class="java.util.Date"/>
+	<field name="dsReclamante" class="java.lang.String"/>
+	<field name="dsReclamada" class="java.lang.String"/>
+	<field name="stNovoImpugnacao.descricao" class="java.lang.String"/>
+	<field name="stTipoProcesso.descricao" class="java.lang.String"/>
+	<field name="colaborador.dsNome" class="java.lang.String"/>
+	<field name="dtCarga" class="java.util.Date"/>
+	<field name="dtPraso" class="java.util.Date"/>
+	<field name="dtDevolucaoCarga" class="java.util.Date"/>
+	<field name="dtProtocolo" class="java.util.Date"/>
+	<field name="vlHonorarioSolicitado" class="java.lang.Double"/>
+	<field name="vlHonorarioFixado" class="java.lang.Double"/>
+	<field name="tpRecebido" class="java.lang.String"/>
+	<field name="dtRecebimento" class="java.util.Date"/>
+	<field name="vlEfetivamenteRecebido" class="java.lang.Double"/>
+	<field name="dsHistoricoProcesso" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="f6c06926-23d6-4911-a121-d6f43e361162"/>
+				<text><![CDATA[nuProcesso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="53322d60-293a-4479-bee4-a361221db692"/>
+				<text><![CDATA[cidade.nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" uuid="12c3eea7-1d40-4a55-9ae8-1571732be25f"/>
+				<text><![CDATA[dsVara]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20" uuid="8f1aabcd-15f1-4bb5-a10f-cc30582c3d13"/>
+				<text><![CDATA[dtpublicacao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="100" height="20" uuid="d8a2d968-0fcc-439b-99f4-818285978f03"/>
+				<text><![CDATA[dsReclamante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="0" width="100" height="20" uuid="74452b44-b9c6-490b-a236-5f2c3d062e1e"/>
+				<text><![CDATA[dsReclamada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="0" width="100" height="20" uuid="8c88bac2-2974-4850-8fbb-29a1e1342e9f"/>
+				<text><![CDATA[stNovoImpugnacao.descricao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="0" width="100" height="20" uuid="d4c3bfaf-1ed2-4a6d-a763-fb07502bd387"/>
+				<text><![CDATA[stTipoProcesso.descricao]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="13a98e23-ef8c-4024-b2ae-c8bebfe0823f"/>
+				<textFieldExpression><![CDATA[$F{nuProcesso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="1ea008cc-6d9f-49dc-925c-103a19ebaa04"/>
+				<textFieldExpression><![CDATA[$F{cidade.nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="f7b0e49a-8d77-4f90-9d36-6720358f6ec0"/>
+				<textFieldExpression><![CDATA[$F{dsVara}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="4ac3f442-d31a-4d6e-8433-62138819e77a"/>
+				<textFieldExpression><![CDATA[$F{dtpublicacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="0316ff70-2975-429e-9f5a-e665a0f020e3"/>
+				<textFieldExpression><![CDATA[$F{dsReclamante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="100" height="20" uuid="dacd1f70-9015-49f8-8c59-481a7d121d9f"/>
+				<textFieldExpression><![CDATA[$F{dsReclamada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="0" width="100" height="20" uuid="263b2e91-3129-4524-8e99-9caf3029b21f"/>
+				<textFieldExpression><![CDATA[$F{stNovoImpugnacao.descricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="702" y="0" width="100" height="20" uuid="a5a479b3-b619-461c-8837-21af25138fdf"/>
+				<textFieldExpression><![CDATA[$F{stTipoProcesso.descricao}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

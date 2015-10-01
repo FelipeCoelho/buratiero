@@ -1,0 +1,208 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+	<h3>Pesquisa de processos</h3>
+	<form class="form-horizontal" wicket:id="formulario">
+		<div class="form-group">
+			<div wicket:id="feedback"></div>
+			<div wicket:id="modalConfirmacao"></div>
+			<div class="panel panel-default">
+				<div class="panel-heading">Pesquisar</div>
+				<div class="panel-body">
+					<div class="control-group">
+						<div class="row">
+							<!-- Text input-->
+							<div class="col-md-3">
+								<label class="control-label" wicket:for="nuProcesso">Número do processo:</label>
+								<div class="controls">
+									<input id="nuProcesso" name="nuProcesso" type="text" class="form-control" wicket:id="nuProcesso">
+								</div>
+							</div>
+							<div class="col-md-2">
+								<label class="control-label" wicket:for="uf">Estado:</label>
+								<div class="controls">
+									<select id="uf" name="uf" class="form-control" wicket:id="uf" icket:id="uf"></select>
+								</div>
+							</div>
+							<!-- Select Basic -->
+							<div class="col-md-2">
+								<label class="control-label" wicket:for="cidade.nome">Cidade:</label>
+								<div class="controls">
+									<input id="cidade" name="cidade" type="text" wicket:id="cidade.nome" class="form-control" maxlength="50">
+								</div>
+							</div>
+							<!-- Text input-->
+							<div class="col-md-2">
+								<label class="control-label" wicket:for="dsVara">Vara:</label>
+								<div class="controls">
+									<input id="vara" name="vara" type="text" class="form-control" wicket:id="dsVara">
+								</div>
+							</div>
+							<!-- Text input-->
+							<div class="col-md-3">
+								<label class="control-label" wicket:for="dtpublicacao">Data da publicação:</label>
+								<div class="controls" data-date-format="dd-mm-yyyy">
+									<input id="dataPublicacao" name="dataPublicacao" type="text" maxlength="10" wicket:id="dtpublicacao" class="form-control data campoText">
+								</div>
+							</div>
+							<!-- Text input-->
+							<div class="col-md-6">
+								<label class="control-label" wicket:for="dsReclamante">Reclamante:</label>
+								<div class="controls">
+									<input id="reclamante" name="reclamante" type="text" wicket:id="dsReclamante" maxlength="50" class="form-control">
+								</div>
+							</div>
+							<!-- Text input-->
+							<div class="col-md-6">
+								<label class="control-label" wicket:for="dsReclamada">Reclamada:</label>
+								<div class="controls">
+									<input id="reclamada" name="reclamada" type="text" maxlength="50" wicket:id="dsReclamada" class="form-control">
+								</div>
+							</div>
+							<!-- Multiple Radios (inline) -->
+							<div class="col-md-3">
+								<label class="control-label" wicket:for="stNovoImpugnacao">Processo Novo/Impugnação:</label>
+								<div class="controls" style="height: 10px;">
+									<span name="status" wicket:id="stNovoImpugnacao"></span>
+								</div>
+							</div>
+							<!-- Multiple Radios (inline) -->
+							<div class="col-md-2">
+								<label class="control-label" wickt:for="stTipoProcesso">Tipo de Processo:</label>
+								<div class="controls" style="height: 10px;">
+									<span name="status" wicket:id="stTipoProcesso"></span>
+								</div>
+							</div>
+							<!-- Text input-->
+							<div class="col-md-5">
+								<label class="control-label" wicket:for="colaborador.dsNome">Colaborador</label>
+								<div class="controls">
+									<input id="colaborador" name="colaborador" type="text" maxlength="50" wicket:id="colaborador.dsNome" class="form-control">
+								</div>
+							</div>
+							<!-- Search input-->
+							<div class="col-md-3">
+								<label class="control-label" for="dtCarga">Data da Carga:</label>
+								<div class="controls">
+									<input id="dataCarga" name="dtCarga" type="text" maxlength="10" wicket:id="dtCarga" class="form-control">
+								</div>
+							</div>
+							<!-- Search input-->
+							<div class="col-md-3">
+								<label class="control-label" for="dataPrazo">Data do prazo:</label>
+								<div class="controls">
+									<input id="dataPrazo" name="dataPrazo" type="text" wicket:id="dtPraso" maxlength="10" class="form-control">
+								</div>
+							</div>
+							<!-- Search input-->
+							<div class="col-md-3">
+								<label class="control-label" for="dtDevolucaoCarga">Data da devolução da carga:</label>
+								<div class="controls">
+									<input id="dtDevolucaoCarga" name="dtDevolucaoCarga" wicket:id="dtDevolucaoCarga" maxlength="10" type="text" class="form-control">
+								</div>
+							</div>
+							<!-- Search input-->
+							<div class="col-md-3">
+								<label class="control-label" for="dtProtocolo">Data do protocolo:</label>
+								<div class="controls">
+									<input id="dtProtocolo" name="dtProtocolo" type="text" wicket:id="dtProtocolo" maxlength="10" class="form-control">
+								</div>
+							</div>
+							<!-- Text input-->
+							<div class="col-md-3">
+								<label class="control-label" wicket:for="vlHonorarioSolicitado">Valor dos honorários solicitados:</label>
+								<div class="controls">
+									<input id="vlHonorarioSolicitado" name="vlHonorarioSolicitado" type="text" wicket:id="vlHonorarioSolicitado" maxlength="15" class="form-control campoText valor">
+									<script type="text/javascript">
+												$(function() {
+													$("#vlHonorarioSolicitado")
+															.maskMoney(
+																	{
+																		symbol : 'R$ ',
+																		showSymbol : true,
+																		thousands : '.',
+																		decimal : ',',
+																		symbolStay : true
+																	});
+												})
+											</script>
+								</div>
+							</div>
+							<!-- Text input-->
+							<div class="col-md-3">
+								<label class="control-label" for="vlHonorarioFixado">Valor dos honorários fixados:</label>
+								<div class="controls">
+									<input id="vlHonorarioFixado" name="vlHonorarioFixado" type="text" wicket:id="vlHonorarioFixado" maxlength="15" class="form-control">
+									<script type="text/javascript">
+												$(function() {
+													$("#vlHonorarioFixado")
+															.maskMoney(
+																	{
+																		symbol : 'R$ ',
+																		showSymbol : true,
+																		thousands : '.',
+																		decimal : ',',
+																		symbolStay : true
+																	});
+												})
+											</script>
+								</div>
+							</div>
+							<!-- Multiple Radios (inline) -->
+							<div class="col-md-2">
+								<label class="control-label" for="radiostpRecebido">Recebimento:</label>
+								<div class="controls" style="height: 10px;">
+									<span name="recebimento" wicket:id="tpRecebido"></span>
+								</div>
+							</div>
+							<!-- Search input-->
+							<div class="col-md-3">
+								<label class="control-label" wicket:for="dtRecebimento">Data de recebimento:</label>
+								<div class="controls">
+									<input id="dtRecebimento" name="dtRecebimento" type="text" wicket:id="dtRecebimento" maxlength="10" class="form-control">
+								</div>
+							</div>
+							<!-- Text input-->
+							<div class="col-md-3">
+								<label class="control-label" for="vlEfetivamenteRecebido">Valor efetivamente recebido:</label>
+								<div class="controls">
+									<input id="vlEfetivamenteRecebido" name="vlEfetivamenteRecebido" type="text" maxlength="15" wicket:id="vlEfetivamenteRecebido" class="form-control">
+									<script type="text/javascript">
+												$(function() {
+													$("#vlEfetivamenteRecebido")
+															.maskMoney(
+																	{
+																		symbol : 'R$ ',
+																		showSymbol : true,
+																		thousands : '.',
+																		decimal : ',',
+																		symbolStay : true
+																	});
+												})
+											</script>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Button -->
+					<div style="height: 10px;"></div>
+					<div class="control-group">
+						<div class="controls" style="margin-right: 15px; float: right;">
+							<input type="submit" class="btn btn-primary" value="Pesquisar" wicket:id="btnPesquisar" />
+							<input type="submit" class="btn btn-default" value="Voltar" wicket:id="btnVoltar" />
+							<input type="submit" class="btn btn-default" value="Limpar" wicket:id="btnLimpar" />
+							<input type="submit" class="btn btn-default" value="Imprimir" wicket:id="imprimir" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">Pesquisar</div>
+				<div class="panel-body">
+					<div class="dataTables_wrapper">
+						<table class="table table-striped" wicket:id="table"></table>
+						<div class="msgERROR" wicket:id="containerVazio">Nenhum registro encontrado!</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</wicket:extend>

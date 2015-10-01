@@ -1,0 +1,5 @@
+JAVA_VERSION="1.8.0_60"
+OS_NAME="Linux"
+OS_VERSION="2.6"
+OS_ARCH="amd64"
+SOURCE=" .:d0afaafe3790 corba:f0c760a2a888 hotspot:dae2d83e0ec2 jaxp:176a2ce2e2d6 jaxws:121e784f01d1 jdk:323b53b10644 langtools:a44348b50794 nashorn:d71decf8767b"

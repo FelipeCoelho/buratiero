@@ -1,0 +1,28 @@
+img {
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+body {
+	background-image: url(../imagens/processo_trabalhista.png);
+}
+
+input>lavel {
+	margin: 7px;
+}
+
+.dataTables_wrapper {
+	overflow-x: scroll;
+}
+
+.dataTables_paginate paging_simple_numbers {
+	text-align: center !important;
+}
+
+.table tr.headers th:hover {
+	background-color: #fff !important;
+}
+
+.table .fa {
+	font-size: 18pt;
+}

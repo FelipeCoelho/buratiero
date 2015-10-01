@@ -1,0 +1,9 @@
+@CHARSET "ISO-8859-1";
+
+/* body {
+ background-image: url(imagem/processo_trabalhista.png) !important;
+ background-repeat: no-repeat;
+} */
+.container-fluid {
+     background-image: url(imagem/processo_trabalhista.png) !important
+} 
