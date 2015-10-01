@@ -1,15 +1,2 @@
-bin / compile BUILD_DIR cache_dir ENV_DIR
-
-export_env_dir () 
-  [-d "$ Env_dir"]; em seguida, 
-    para e em $ ($ env_dir ls); fazer 
-      echo "$ e" | grep -E "$ whitelist_regex" | grep -qvE "$ blacklist_regex" && 
-      export "e = $ $ (cat $ env_dir / $ 
-      e)": 
-    feito 
-  
-fi}
-
-bin / release BUILD_DIR
-
+https://github.com/ddollar/heroku-buildpack-multi
 https://github.com/heroku/heroku-buildpack-java
